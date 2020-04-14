@@ -1,0 +1,36 @@
+
+@import '/images/ranadorada.jpg';
+
+.body{
+    background: rgba(6,105,59,1);
+    background: -moz-linear-gradient(left, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
+    background: -o-linear-gradient(left, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
+    background: -ms-linear-gradient(left, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
+    background: linear-gradient(to right, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
+}
+.form{
+background-image: url("images/ranadorada.jpg");
+background-size: cover ;
+background-repeat: no-repeat;
+
+border-radius: 5px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 0rem;
+    padding-top: 20px;
+}
+label{
+    color:white;
+}
+.form-group{
+    line-height: 1;
+}
+.card-body{
+    background:#98b84f;
+
+
+}

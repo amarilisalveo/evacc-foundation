@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-
+import app from './app.css';
+import footer from './footer.css';
+import Header from "./Header";
+import Footer from './footer';
 class App extends Component {
 
   constructor(props) {
@@ -27,10 +30,10 @@ class App extends Component {
   }
 
   componentWillMount() {
-    let formRef = firebaseConf.database().ref('form').orderByKey().limitToLast(6);
+    let formRef = firebaseConf.database().ref('Nueva_Especie').orderByKey().limitToLast(6);
     formRef.on('child_added', snapshot => {
-      const { name, email, city, phone, message } = snapshot.val();
-      const data = { name, email, city, phone, message };
+      const { cantidad, especie,fecha, estado, imagen, observaciones,personal,tanque} = snapshot.val();
+      const data = { cantidad, especie, fecha, estado,  imagen, observaciones,personal,tanque };
       this.setState({ form: [data].concat(this.state.form) });
     })
   }
@@ -38,14 +41,17 @@ class App extends Component {
   sendMessage(e) {
     e.preventDefault();
     const params = {
-      name: this.inputName.value,
-      email: this.inputEmail.value,
-      city: this.inputCity.value,
-      phone: this.inputPhone.value,
-      message: this.textAreaMessage.value
+      cantidad: this.inputQuantity.value,
+      especie: this.inputSpecie.value,
+      fecha: this.inputDate.value,
+      estado: this.inputState.value,
+      imagen: this.inputImage.value,
+      observaciones: this.textAreaMessage.value,
+      personal: this.inputPersonal.value,
+      tanque:this.inputTank.value
     };
-    if (params.name && params.email && params.phone && params.phone && params.message) {
-      firebaseConf.database().ref('form').push(params).then(() => {
+    if (params.cantidad && params.especie && params.fecha && params.estado && params.imagen && params.observaciones && params.personal && params.tanque) {
+      firebaseConf.database().ref('Nueva_Especie').push(params).then(() => {
         this.showAlert('success', 'Your message was sent successfull');
       }).catch(() => {
         this.showAlert('danger', 'Your message could not be sent');
@@ -58,7 +64,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      
+      <div className="body">
+          <Header />
         {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
           <div className='container'>
             {this.state.alertData.message}
@@ -66,34 +74,50 @@ class App extends Component {
         </div>}
         <div className='container' style={{ padding: `40px 0px` }}>
           <div className='row'>
-            <div className='col-sm-4'>
-              <h2>Contact Form</h2>
+            <div className='col-sm-4 form'>
+              <h2>Nuevas Especies</h2>
               <form onSubmit={this.sendMessage.bind(this)} ref='contactForm' >
                 <div className='form-group'>
-                  <label htmlFor='name'>Name</label>
-                  <input type='text' className='form-control' id='name' placeholder='Name' ref={name => this.inputName = name} />
+                  <label htmlFor='cantidad'></label>
+                  <input type='number' className='form-control' id='cantidad' placeholder='Cantidad' ref={cantidad=> this.inputQuantity = cantidad} />
                 </div>
                 <div className='form-group'>
-                  <label htmlFor='exampleInputEmail1'>Email</label>
-                  <input type='email' className='form-control' id='email' placeholder='Email' ref={email => this.inputEmail = email} />
-                </div>
-                <div className='form-group'>
-                  <label htmlFor='city'>City</label>
-                  <select className='form-control' id='city' ref={city => this.inputCity = city}>
-                    <option value='México'>México</option>
-                    <option value='Guadalajara'>Guadalajara</option>
-                    <option value='Monterrey'>Monterrey</option>
+                  <label htmlFor='especie'></label>
+                  <select className='form-control' id='especie'  ref={especie => this.inputSpecie = especie}>
+                  <option value='Atelopus Zetekis' disabled selected>Especies</option>
+                    <option value='Atelopus Zetekis'>Atelopus Zetekis</option>
+                    <option value='Atelopus Varius'>Atelopus Varius</option>
+                    <option value='Dauratus'>Dauratus</option>
+                    <option value='Anoteca Cornuta'>Anoteca Cornuta</option>
+                    <option value='Gastroteca Cornuta'>Gastroteca Cornuta</option>
+                    <option value='Cristal'>Cristal</option>
                   </select>
                 </div>
                 <div className='form-group'>
-                  <label htmlFor='phone'>Phone</label>
-                  <input type='number' className='form-control' id='phone' placeholder='+52 1' ref={phone => this.inputPhone = phone} />
+                  <label htmlFor='fecha'></label>
+                  <input type='date' className='form-control' id='fecha' placeholder='Fecha' ref={fecha => this.inputDate = fecha} />
                 </div>
                 <div className='form-group'>
-                  <label htmlFor='message'>Message</label>
-                  <textarea className='form-control' id='message' rows='3' ref={message => this.textAreaMessage = message}></textarea>
+                  <label htmlFor='estado'></label>
+                  <input type='text' className='form-control' id='estado' placeholder='Estado' ref={estado => this.inputState = estado} />
                 </div>
-                <button type='submit' className='btn btn-primary'>Send</button>
+                  <div className='form-group'>
+                  <label htmlFor='imagen'></label>
+                  <input type='file' className='form-control' id='image' placeholder='Name' ref={imagen=> this.inputImage = imagen} />
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='observaciones'></label>
+                  <textarea className='form-control' id='observaciones' placeholder='Observaciones'rows='3' ref={observaciones => this.textAreaMessage = observaciones}></textarea>
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='personal'></label>
+                  <input type='text' className='form-control' id='personal' placeholder='Personal' ref={personal=> this.inputPersonal = personal} />
+                </div>
+                <div className='form-group'>
+                  <label htmlFor='tanque'></label>
+                  <input type='text' className='form-control' id='tanque' placeholder='Tanque' ref={tanque=> this.inputTank = tanque} />
+                </div>
+                <button type='submit' className='btn btn-primary'>Enviar</button>
               </form>
             </div>
             <div className='col-sm-8'>
@@ -102,9 +126,9 @@ class App extends Component {
                   <div className='col-sm-6' key={form.phone} style={{ margin: `0px 0px 30px 0px` }}>
                     <div className='card'>
                       <div className='card-body'>
-                        <h4 className='card-title'>{form.name}</h4>
-                        <h6 className='card-subtitle mb-2 text-muted'>{form.city}</h6>
-                        <p className='card-text'>{form.message}</p>
+                        <h4 className='card-title'>{form.especie}</h4>
+                        <h6 className='card-subtitle mb-2 text-muted'>{form.cantidad}</h6>
+                        <p className='card-text'>{form.observaciones}</p>
                         <a href={`tel:${form.phone}`} className='card-link'>{form.phone}</a>
                         <a href={`mailto:${form.email}`} className='card-link'>{form.email}</a>
                       </div>
@@ -114,7 +138,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className='alert alert-info fixed-bottom'>
+        {/* /* <div className='alert alert-info fixed-bottom'>
           <div className='container'>
             <div className='row'>
               <div className='col-sm-12'>
@@ -123,7 +147,8 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */ }
+          <Footer/>
       </div>
     );
   }
