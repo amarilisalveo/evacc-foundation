@@ -1,18 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FormSpecies from './components/FormSpecies';
-import FormCuarentena from './components/FormCuarentena';
-import FormFallecidos from './components/FormFallecidos';
-import Home from './components/Home';
-import registerServiceWorker from './registerServiceWorker';
-import Header from "./components/Header";
-import Footer from "./components/footer";
+import FormSpecies from './FormSpecies';
+import FormCuarentena from './FormCuarentena';
+import FormFallecidos from './FormFallecidos';
+import Home from './Home';
+
+
+import Header from "./Header";
+import Footer from "./footer";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-const routing = (
+
+
+function routing() {
+    
+
+return(
     <Router>
+      
+
       <div>
+   
         <Header />
-       
+     
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Especies" component={FormSpecies} />
@@ -20,10 +29,15 @@ const routing = (
           <Route path="/Fallecidas" component={FormFallecidos} /> 
       
         </Switch> 
+   
         <Footer />
+      
       </div>
-    </Router>
-  );
+     
+    </Router> 
   
-ReactDOM.render(routing, document.getElementById("root"));
-registerServiceWorker();
+  );
+}
+
+  export default routing;
+  

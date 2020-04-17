@@ -10,7 +10,7 @@
     background: linear-gradient(to right, rgba(6,105,59,1) 0%, rgba(117,137,12,1) 100%);
 }
 .form{
-background-image: url("images/ranadorada.jpg");
+background-image: url("../images/ranadorada.jpg");
 background-size: cover ;
 background-repeat: no-repeat;
 
@@ -33,4 +33,42 @@ label{
     background:#98b84f;
 
 
+}
+.btn-primary {
+    color: #fff;
+    background-color:  rgb(255, 112, 10);
+    border-color:  rgb(255, 112, 10);
+    margin-bottom: 15px;
+    text-align: center;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgba(6,79,45,1);;
+    border-color: rgba(6,79,45,1);;
+}
+.vista{
+    color: white;
+}
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+.container {
+   
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+.mt-4, .my-4 {
+     margin-top:0rem!important; 
+}
+.mb-5, .my-5 {
+    margin-bottom: 0rem!important;
+}
+@media (min-width: 1200px) {
+.container {
+    max-width: 1700px;
+}
 }

@@ -10,7 +10,7 @@
   
   .footer-distributed{
     background: rgba(247,149,29,1);
-    background: -moz-linear-gradient(top, rgba(247,149,29,1) 0%, rgba(255,112,10,1) 100%);
+    background: -moz-linear-gradient(top, rgba(247,149,29,1) 0%, rgb(255, 112, 10) 100%);
   
     background: -webkit-linear-gradient(top, rgba(247,149,29,1) 0%, rgba(255,112,10,1) 100%);
     background: -o-linear-gradient(top, rgba(247,149,29,1) 0%, rgba(255,112,10,1) 100%);
@@ -41,12 +41,13 @@
   
   .footer-distributed h3{
       color:  #ffffff;
-      font: normal 36px 'Open Sans', cursive;
+      font: normal 36px 'Open Sans',cursive;
+      font-weight: bold;
       margin: 0;
   }
   
   .footer-distributed h3 span{
-      color:  lightseagreen;
+      color:  #06693a;
   }
   
   /* Footer links */
@@ -138,7 +139,7 @@
   
   .footer-distributed .footer-company-about{
       line-height: 20px;
-      color:  #92999f;
+      color:  #06693a;
       font-size: 13px;
       font-weight: normal;
       margin: 0;
@@ -161,7 +162,7 @@
       width: 35px;
       height: 35px;
       cursor: pointer;
-      background-color:  #33383b;
+    
       border-radius: 2px;
   
       font-size: 20px;

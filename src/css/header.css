@@ -3,8 +3,12 @@
 .logo{
 background-image: url("/images/logo-evacc.png");
 height: 70px;
-}
+margin-bottom: 10px;
 
+}
+#logo-header{
+margin-right: 10px;
+}
 /*	Header	*/
 
 header{
@@ -22,26 +26,42 @@ header{
     background: -webkit-linear-gradient(left, rgba(6,79,45,1) 0%, rgba(8,97,55,1) 100%);
     background: -o-linear-gradient(left, rgba(6,79,45,1) 0%, rgba(8,97,55,1) 100%);
     background: -ms-linear-gradient(left, rgba(6,79,45,1) 0%, rgba(8,97,55,1) 100%);
-    background: linear-gradient(to right, rgba(6,79,45,1) 0%, rgba(8,97,55,1) 100%);
-}
+	background: linear-gradient(to right, rgba(6,79,45,1) 0%, rgba(8,97,55,1) 100%);
 
-.header-left{
-	font: normal 28px 'Fugaz One', cursive;
+}
+.header-left {
+	display: flex;
+	align-items: center;
+	
+	}
+.header-left h4{
+font-family:Open Sans, cursive; 
+font-weight: bold;
+
 }
 
 .header-left span{
 	color: #EAD314;
+
 }
+
 
 .header-center ul{
 	list-style: none;
+	
 }
 
 .header-center ul li{
 	display: inline-block;
 	margin: 0 15px;
+	
 }
-
+a{
+	color:white!important;
+	padding: 0 5px;
+	text-decoration: none;
+	font-family:Open Sans, cursive; 
+}
 .header-center ul li a{
 	text-decoration: none;
 	color: #fff;
@@ -57,7 +77,8 @@ header{
     padding: 12px 30px;
     border: 2px solid #FFFFFF;
     border-radius: 4px;
-    background-color: transparent;
+	background-color: transparent;
+	visibility: hidden;
 }
 
 .header-right button:hover {

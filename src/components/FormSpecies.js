@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-import app from './app.css';
-import footer from './footer.css';
+import app from '../css/app.css';
+import footer from '../css/footer.css';
 import Header from "./Header";
 import Footer from './footer';
-class App extends Component {
+class FormSpecies extends Component {
 
   constructor(props) {
     super(props);
@@ -66,12 +66,8 @@ class App extends Component {
     return (
       
       <div className="body">
-          <Header />
-        {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
-          <div className='container'>
-            {this.state.alertData.message}
-          </div>
-        </div>}
+    
+     
         <div className='container' style={{ padding: `40px 0px` }}>
           <div className='row'>
             <div className='col-sm-4 form'>
@@ -119,39 +115,35 @@ class App extends Component {
                 </div>
                 <button type='submit' className='btn btn-primary'>Enviar</button>
               </form>
+              {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
+          <div className='container'>
+            {this.state.alertData.message}
+          </div>
+        </div>}
             </div>
-            <div className='col-sm-8'>
+            <div className='col-sm-8 vista'>
+            <h3>Historial Reciente</h3>
               <div className='row'>
                 {this.state.form.map(form =>
-                  <div className='col-sm-6' key={form.phone} style={{ margin: `0px 0px 30px 0px` }}>
+                  <div className='col-sm-6'  style={{ margin: `0px 0px 30px 0px` }}>
                     <div className='card'>
                       <div className='card-body'>
                         <h4 className='card-title'>{form.especie}</h4>
                         <h6 className='card-subtitle mb-2 text-muted'>{form.cantidad}</h6>
                         <p className='card-text'>{form.observaciones}</p>
-                        <a href={`tel:${form.phone}`} className='card-link'>{form.phone}</a>
-                        <a href={`mailto:${form.email}`} className='card-link'>{form.email}</a>
+                     
                       </div>
                     </div>
                   </div>)}
               </div>
             </div>
+
           </div>
         </div>
-        {/* /* <div className='alert alert-info fixed-bottom'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-sm-12'>
-                GnDx: <a href='https://gndx.co/formulario-contacto-react-firebase/' className='alert-link'>Formulario de Contacto con React + Firebase </a>
-                GitHub: <a href='https://github.com/gndx/react-form-firebase' className='alert-link'>react-form-firebase</a>
-              </div>
-            </div>
-          </div>
-        </div> */ }
-          <Footer/>
+      
       </div>
     );
   }
 }
 
-export default App;
+export default FormSpecies;
