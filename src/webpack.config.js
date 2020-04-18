@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <system.webServer>
-    <staticContent>
-      <mimeMap fileExtension=".json" mimeType="application/json" />
-    </staticContent>
-    <modules runAllManagedModulesForAllRequests="true"/>
-  </system.webServer>
-</configuration>
+module: {
+  loaders: [
+      {
+          test: /\.jsx?/,
+          include: APP_DIR,
+          loader: 'babel',
+          query  :{
+              presets:['react','es2015']
+          }
+      },
