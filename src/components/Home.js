@@ -10,7 +10,7 @@ class Home extends React.Component {
       <main>
         
 
-      <div class="container mt-4">
+      <div class="container-carousel mt-4">
 
         
 

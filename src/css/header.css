@@ -159,6 +159,9 @@ a{
         align-items: center;
 	}
 
+	.header-right{
+display: none;
+	}
 
 }
 

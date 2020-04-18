@@ -50,13 +50,13 @@ class FormCuarentena extends Component {
     };
     if ( params.especie && params.estado && params.fecha && params.imagen && params.observaciones && params.personal  && params.sexo && params.tanque) {
       firebaseConf.database().ref('Cuarentena').push(params).then(() => {
-        this.showAlert('success', 'Your message was sent successfull');
+        this.showAlert('success', 'Su mensaje ha sido enviado!');
       }).catch(() => {
-        this.showAlert('danger', 'Your message could not be sent');
+        this.showAlert('danger', 'Su mensaje no ha sido enviado');
       });
       this.resetForm();
     } else {
-      this.showAlert('warning', 'Please fill the form');
+      this.showAlert('warning', 'Llene los campos');
     };
   }
 
@@ -65,14 +65,10 @@ class FormCuarentena extends Component {
       
       <div className="body-cuarentena">
     
-        {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
-          <div className='container'>
-            {this.state.alertData.message}
-          </div>
-        </div>}
+       
         <div className='container' style={{ padding: `40px 0px` }}>
           <div className='row'>
-            <div className='col-sm-4 form'>
+            <div className='col-sm-4 form-cuarentena'>
               <h2>Cuarentena</h2>
               <form onSubmit={this.sendMessage.bind(this)} ref='contactForm' >
                
@@ -124,6 +120,11 @@ class FormCuarentena extends Component {
                 </div>
                 <button type='submit' className='btn btn-primary'>Enviar</button>
               </form>
+              {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
+          <div className='container'>
+            {this.state.alertData.message}
+          </div>
+        </div>}
             </div>
             <div className='col-sm-8 vista'>
             <h3>Historial Reciente</h3>

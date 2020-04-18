@@ -13,13 +13,13 @@ const Footer = props => {
         <h3>EVACC<span> Foundation</span></h3>
 
         <p className="footer-links">
-            <a href="#" className="link-1">Home</a>
+            <a href="/" className="link-1">Home</a>
             
-            <a href="#">Especies</a>
+            <a href="/Especies">Especies</a>
         
-            <a href="#">Cuarentena</a>
+            <a href="/Cuarentena">Cuarentena</a>
         
-            <a href="#">Fallecidas</a>
+            <a href="/Fallecidas">Fallecidas</a>
             
         
         </p>
@@ -56,13 +56,13 @@ const Footer = props => {
 
         <div className="footer-icons">
 
-            <a href="#">
+            <a href="https://www.facebook.com/evaccfoundation/" target="_blank" rel="noopener noreferrer">
      
   <img src={require('../images/icons/icon-facebook.png')} height="39" width="39" alt="icon-fb"/>
 </a>
-            <a href="#">    
+            <a href="https://www.instagram.com/evaccfoundation/" target="_blank" rel="noopener noreferrer">    
   <img src={require('../images/icons/icon-instagram.png')} height="39" width="39" alt="icon-fb"/></a>
-            <a href="#">    
+            <a href="https://twitter.com/EvaccFoundation" target="_blank" rel="noopener noreferrer">    
   <img src={require('../images/icons/icon-twitter.png')} height="39" width="39" alt="icon-fb"/></a>
            
 

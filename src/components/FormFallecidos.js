@@ -67,11 +67,7 @@ class Fallecidas extends Component {
       
       <div className="body">
     
-        {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
-          <div className='container'>
-            {this.state.alertData.message}
-          </div>
-        </div>}
+       
         <div className='container' style={{ padding: `40px 0px` }}>
           <div className='row'>
             <div className='col-sm-4 form-fallecidas'>
@@ -126,6 +122,11 @@ class Fallecidas extends Component {
                 </div>
                 <button type='submit' className='btn btn-primary'>Enviar</button>
               </form>
+              {this.state.alert && <div className={`alert alert-${this.state.alertData.type}`} role='alert'>
+          <div className='container'>
+            {this.state.alertData.message}
+          </div>
+        </div>}
             </div>
             <div className='col-sm-8 vista' >
             <h3>Historial Reciente</h3>
