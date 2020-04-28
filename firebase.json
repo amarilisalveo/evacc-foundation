@@ -1,5 +1,6 @@
 {
   "hosting": {
+    
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -15,6 +16,11 @@
         "Target address":"/index.html",
         "Type":"200 (Rewrite)"
       }
-    ]
+    ],
+    "headers": [
+      {
+        "source": "/registerServiceWorker.js",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      }   ]
   }
 }
