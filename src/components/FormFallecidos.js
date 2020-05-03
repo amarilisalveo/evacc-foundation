@@ -52,13 +52,13 @@ class Fallecidas extends Component {
     };
     if ( params.especie  && params.estado && params.fecha && params.imagen && params.observaciones && params.personal  && params.sexo && params.tanque) {
       firebaseConf.database().ref('Fallecidas').push(params).then(() => {
-        this.showAlert('success', 'Your message was sent successfull');
+        this.showAlert('success', 'Sus datos han sido enviados');
       }).catch(() => {
-        this.showAlert('danger', 'Your message could not be sent');
+        this.showAlert('danger', 'Sus datos no han sido enviados');
       });
       this.resetForm();
     } else {
-      this.showAlert('warning', 'Please fill the form');
+      this.showAlert('warning', 'Porfavor, llene los campos');
     };
   }
 

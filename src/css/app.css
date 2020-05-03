@@ -72,3 +72,25 @@ label{
     max-width: 1700px;
 } */
 }
+@media only screen and (max-width: 600px) {
+    .container {
+      width: 90%;
+      }
+     h2{
+        font-size:16px;
+        }
+        .form-control {
+           
+            font-size: 12px;
+            
+        }
+        h3{
+            font-size:18px;
+            }
+           .vista{
+margin-top:20px;
+            }
+            h4{
+                font-size:12px;
+            }
+  }

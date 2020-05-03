@@ -53,9 +53,9 @@ class FormSpecies extends Component {
     if (params.cantidad && params.especie && params.fecha && params.estado && 
       params.imagen && params.observaciones && params.personal && params.tanque) {
       firebaseConf.database().ref('Nueva_Especie').push(params).then(() => {
-        this.showAlert('success', 'Su mensaje ha sido enviado!');
+        this.showAlert('success', 'Su datos han sido enviados!');
       }).catch(() => {
-        this.showAlert('danger', 'Su mensaje no ha sido enviado');
+        this.showAlert('danger', 'Sus datos no han sido enviados');
       });
       this.resetForm();
     } else {

@@ -48,11 +48,12 @@ class FormCuarentena extends Component {
       sexo: this.inputSex.value,
       tanque:this.inputTank.value
     };
-    if ( params.especie && params.estado && params.fecha && params.imagen && params.observaciones && params.personal  && params.sexo && params.tanque) {
+    if ( params.especie && params.estado && params.fecha && params.imagen &&
+       params.observaciones && params.personal  && params.sexo && params.tanque) {
       firebaseConf.database().ref('Cuarentena').push(params).then(() => {
-        this.showAlert('success', 'Su mensaje ha sido enviado!');
+        this.showAlert('success', 'Sus datos han sido enviados!');
       }).catch(() => {
-        this.showAlert('danger', 'Su mensaje no ha sido enviado');
+        this.showAlert('danger', 'Sus datos han sido enviados');
       });
       this.resetForm();
     } else {
