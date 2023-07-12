@@ -10,14 +10,14 @@ class Home extends React.Component {
       <main>
         
 
-      <div class="container-carousel mt-4">
+      <div className="container-carousel mt-4">
 
         
 
-          <div id="carousel-example-1z" class="carousel slide carousel-fade mb-5" data-ride="carousel">
+          <div id="carousel-example-1z" className="carousel slide carousel-fade mb-5" data-ride="carousel">
     
-              <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+              <ol className="carousel-indicators">
+                  <li data-target="#carousel-example-1z" data-slide-to="0" className="active"></li>
                   <li data-target="#carousel-example-1z" data-slide-to="1"></li>
                   <li data-target="#carousel-example-1z" data-slide-to="2"></li>
               </ol>
@@ -38,11 +38,11 @@ class Home extends React.Component {
          
               </div>
      
-              <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+              <a className="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span className="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+              <a className="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
                   <span className="carousel-control-next-icon" aria-hidden="true"></span>
                   <span className="sr-only">Next</span>
               </a>
