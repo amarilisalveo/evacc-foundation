@@ -20,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "description": "Simple form with Firebase",
-  "main": "Index.js",
+  "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
