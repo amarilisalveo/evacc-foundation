@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-import fallecidos from '../css/fallecidas.css';
-import footer from '../css/footer.css';
-import Header from "./Header";
-import Footer from './footer';
+
 class Fallecidas extends Component {
 
   constructor(props) {

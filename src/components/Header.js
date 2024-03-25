@@ -13,8 +13,8 @@ class Header extends React.Component {
       <header >
  
        <div className="header-left">
-        <a id="logo-header" href="#">
-			 <img className="logo"src={require('../images/logo-evacc.png')}/> 
+        <a id="logo-header" >
+			 <img className="logo"src={require('../images/logo-evacc.png')} alt="logo-header"/> 
 
 		</a>   
     <h4>EVACC<span> Foundation</span></h4>

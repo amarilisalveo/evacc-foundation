@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-import cuarentena from '../css/cuarentena.css';
+
 class FormCuarentena extends Component {
 
   constructor(props) {

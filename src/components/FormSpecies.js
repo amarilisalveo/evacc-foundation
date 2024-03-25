@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-import app from '../css/app.css';
-import footer from '../css/footer.css';
-import Header from "./Header";
-import Footer from './footer';
+
 class FormSpecies extends Component {
 
   constructor(props) {

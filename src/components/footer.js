@@ -8,7 +8,7 @@ const Footer = props => {
     <footer className="footer-distributed">
 
     <div className="footer-left">
-    <img className="logo-footer" src={require('../images/logo-evacc.png')}/>
+    <img className="logo-footer" src={require('../images/logo-evacc.png')} alt="logo-footer"/>
 			
         <h3>EVACC<span> Foundation</span></h3>
 
