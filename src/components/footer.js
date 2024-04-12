@@ -24,7 +24,7 @@ const Footer = props => {
         
         </p>
 
-        <p className="footer-company-name">Team NAT © 2020</p>
+        <p className="footer-company-name">Team NAT © 2024</p>
     </div>
 
     <div className="footer-center">
