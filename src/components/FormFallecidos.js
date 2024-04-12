@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
-import formfallecidas from '../css/fallecidas.css';
+import '../css/fallecidas.css';
 
 class Fallecidas extends Component {
 

@@ -1,6 +1,6 @@
 
 import React from "react";
-import header from '../css/header.css';
+import  '../css/header.css';
 import { NavLink } from "react-router-dom";
 
 // class component
