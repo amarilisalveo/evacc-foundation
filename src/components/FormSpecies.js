@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebaseConf from './Firebase';
+import formSpecies from '../css/app.css';
 
 class FormSpecies extends Component {
 
@@ -78,7 +79,7 @@ class FormSpecies extends Component {
                 <div className='form-group'>
                   <label htmlFor='especie'></label>
                   <select className='form-control' id='especie'  ref={especie => this.inputSpecie = especie}>
-                  <option value='Atelopus Zetekis' disabled selected>Especies</option>
+                  <option value='Atelopus Zetekis' disabled defaultValue >Especies</option>
                     <option value='Atelopus Zetekis'>Atelopus Zetekis</option>
                     <option value='Atelopus Varius'>Atelopus Varius</option>
                     <option value='Dauratus'>Dauratus</option>

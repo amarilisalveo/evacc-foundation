@@ -1,6 +1,6 @@
 @import '/images/ranadorada.jpg';
 
-.body-cuarentena{
+.body{
     background: rgba(97,166,0,1);
     background: -moz-linear-gradient(top, rgba(97,166,0,1) 0%, rgba(6,105,59,1) 100%);
     background: -webkit-linear-gradient(top, rgba(97,166,0,1) 0%, rgba(6,105,59,1) 100%);
